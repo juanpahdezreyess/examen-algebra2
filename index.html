@@ -35,23 +35,24 @@
       line-height: 1.6;
       min-height: 100vh;
       overflow-x: hidden;
+      padding: 10px;
     }
     
     .container {
-      max-width: 1200px;
+      max-width: 100%;
       margin: 0 auto;
-      padding: 20px;
     }
     
     /* Header Styles */
     .hero-header {
       text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
-      border-radius: 24px;
-      margin-bottom: 40px;
+      padding: 80px 40px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+      border-radius: 30px;
+      margin-bottom: 50px;
       position: relative;
       overflow: hidden;
+      border: 2px solid rgba(99, 102, 241, 0.3);
     }
     
     .hero-header::before {
@@ -61,51 +62,53 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.2) 0%, transparent 50%);
+      background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.25) 0%, transparent 50%);
       pointer-events: none;
     }
     
     .hero-icon {
-      width: 80px;
-      height: 80px;
+      width: 120px;
+      height: 120px;
       background: var(--gradient);
-      border-radius: 20px;
+      border-radius: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 20px;
-      font-size: 32px;
-      box-shadow: 0 8px 32px rgba(99, 102, 241, 0.3);
+      margin: 0 auto 30px;
+      font-size: 48px;
+      box-shadow: 0 12px 40px rgba(99, 102, 241, 0.4);
     }
     
     .hero-title {
-      font-size: 3.5rem;
+      font-size: 4.5rem;
       font-weight: 800;
       background: var(--gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 16px;
+      margin-bottom: 25px;
+      line-height: 1.1;
     }
     
     .hero-subtitle {
-      font-size: 1.25rem;
+      font-size: 1.8rem;
       color: var(--muted);
-      max-width: 600px;
+      max-width: 800px;
       margin: 0 auto;
+      line-height: 1.4;
     }
     
     /* Card Styles */
     .card {
       background: var(--card);
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      padding: 50px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+      border: 2px solid rgba(255, 255, 255, 0.15);
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
     
     .card::before {
@@ -114,36 +117,36 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
+      height: 6px;
       background: var(--gradient);
     }
     
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
-      border-color: rgba(99, 102, 241, 0.3);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      border-color: rgba(99, 102, 241, 0.4);
     }
     
     .card-header {
       display: flex;
       align-items: center;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
     
     .card-icon {
-      width: 60px;
-      height: 60px;
+      width: 80px;
+      height: 80px;
       background: var(--gradient);
-      border-radius: 15px;
+      border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-right: 20px;
-      font-size: 24px;
+      margin-right: 25px;
+      font-size: 32px;
     }
     
     .card-title {
-      font-size: 2rem;
+      font-size: 2.8rem;
       font-weight: 700;
       color: #fff;
       flex: 1;
@@ -151,75 +154,75 @@
     
     /* Math Display */
     .math-display {
-      background: rgba(15, 23, 42, 0.8);
-      border: 2px solid rgba(99, 102, 241, 0.3);
-      border-radius: 16px;
-      padding: 30px;
-      margin: 25px 0;
-      font-size: 1.2rem;
+      background: rgba(15, 23, 42, 0.9);
+      border: 3px solid rgba(99, 102, 241, 0.4);
+      border-radius: 20px;
+      padding: 40px;
+      margin: 30px 0;
+      font-size: 1.4rem;
       position: relative;
     }
     
     .math-display::before {
       content: '🧮';
       position: absolute;
-      top: -15px;
-      left: 25px;
+      top: -20px;
+      left: 30px;
       background: var(--card);
-      padding: 0 12px;
-      font-size: 1rem;
+      padding: 0 15px;
+      font-size: 1.2rem;
     }
     
     /* Step Cards */
     .step-card {
       background: var(--glass);
-      border-radius: 16px;
-      padding: 25px;
-      margin: 20px 0;
-      border-left: 5px solid var(--accent);
+      border-radius: 20px;
+      padding: 35px;
+      margin: 25px 0;
+      border-left: 6px solid var(--accent);
       transition: all 0.3s ease;
     }
     
     .step-card:hover {
-      background: rgba(99, 102, 241, 0.1);
-      transform: translateX(5px);
+      background: rgba(99, 102, 241, 0.15);
+      transform: translateX(8px);
     }
     
     .step-number {
       display: inline-block;
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       background: var(--accent);
       border-radius: 50%;
       text-align: center;
-      line-height: 40px;
+      line-height: 50px;
       font-weight: 700;
-      margin-right: 15px;
-      font-size: 1.1rem;
+      margin-right: 20px;
+      font-size: 1.3rem;
     }
     
     /* Explanation Sections */
     .explanation {
-      background: rgba(99, 102, 241, 0.05);
-      border-radius: 16px;
-      padding: 25px;
-      margin: 20px 0;
-      border: 1px solid rgba(99, 102, 241, 0.2);
+      background: rgba(99, 102, 241, 0.08);
+      border-radius: 20px;
+      padding: 35px;
+      margin: 25px 0;
+      border: 2px solid rgba(99, 102, 241, 0.25);
     }
     
     .explanation-title {
       color: var(--accent-light);
-      font-size: 1.3rem;
+      font-size: 1.6rem;
       font-weight: 600;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
     }
     
     .explanation-title::before {
       content: '💡';
-      margin-right: 10px;
-      font-size: 1.2rem;
+      margin-right: 15px;
+      font-size: 1.4rem;
     }
     
     /* Vector Notation */
@@ -227,51 +230,100 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      gap: 20px;
-      margin: 30px 0;
+      gap: 30px;
+      margin: 40px 0;
     }
     
     .vector-box {
       background: var(--glass);
-      padding: 20px;
-      border-radius: 12px;
+      padding: 30px;
+      border-radius: 18px;
       text-align: center;
       flex: 1;
-      min-width: 200px;
+      min-width: 280px;
+      border: 2px solid rgba(255, 255, 255, 0.1);
     }
     
     .vector-dimension {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       color: var(--muted);
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    /* Text Sizes */
+    .large-text {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+    
+    .x-large-text {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      color: var(--muted);
     }
     
     /* Footer */
     .footer {
       text-align: center;
-      padding: 40px 20px;
+      padding: 50px 20px;
       color: var(--muted);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      margin-top: 50px;
+      border-top: 2px solid rgba(255, 255, 255, 0.15);
+      margin-top: 60px;
+    }
+    
+    .footer p {
+      font-size: 1.1rem;
     }
     
     /* Responsive */
     @media (max-width: 768px) {
+      body {
+        padding: 5px;
+      }
+      
+      .hero-header {
+        padding: 50px 20px;
+        margin-bottom: 30px;
+      }
+      
       .hero-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.3rem;
+      }
+      
+      .hero-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 32px;
       }
       
       .card {
-        padding: 25px;
+        padding: 30px;
+        margin-bottom: 25px;
       }
       
       .card-title {
-        font-size: 1.7rem;
+        font-size: 2rem;
+      }
+      
+      .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
       }
       
       .math-display {
-        padding: 20px;
-        font-size: 1rem;
+        padding: 25px;
+        font-size: 1.1rem;
+      }
+      
+      .large-text {
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -282,55 +334,59 @@
     <!-- Hero Header -->
     <header class="hero-header">
       <div class="hero-icon">📐</div>
-      <h1 class="hero-title">Producto Escalar y Ángulo entre Vectores</h1>
-      <p class="hero-subtitle">Una guía completa desde los conceptos básicos hasta aplicaciones prácticas</p>
+      <h1 class="hero-title">PRODUCTO ESCALAR Y ÁNGULO ENTRE VECTORES</h1>
+      <p class="hero-subtitle">Guía completa y detallada del álgebra lineal aplicada - Desde conceptos básicos hasta ejemplos avanzados</p>
     </header>
 
     <!-- Conceptos Fundamentales -->
     <section class="card">
       <div class="card-header">
         <div class="card-icon">🔍</div>
-        <h2 class="card-title">1. Conceptos Fundamentales</h2>
+        <h2 class="card-title">1. CONCEPTOS FUNDAMENTALES DE VECTORES</h2>
       </div>
       
       <div class="explanation">
-        <div class="explanation-title">¿Qué es un Vector?</div>
-        <p style="color: var(--muted); line-height: 1.8;">
-          Un <strong>vector</strong> es una entidad matemática que tiene <strong>magnitud</strong> (longitud) y <strong>dirección</strong>. 
-          Se representa como una flecha en el espacio. En álgebra lineal, los vectores se escriben usando coordenadas entre paréntesis.
+        <div class="explanation-title">¿QUÉ ES EXACTAMENTE UN VECTOR?</div>
+        <p class="x-large-text">
+          Un <strong style="color: var(--accent-light);">vector</strong> es una entidad matemática fundamental que posee dos características esenciales: 
+          <strong style="color: var(--accent-light);">MAGNITUD</strong> (qué tan largo es) y <strong style="color: var(--accent-light);">DIRECCIÓN</strong> (hacia dónde apunta). 
+          A diferencia de los escalares que solo tienen magnitud, los vectores nos permiten representar cantidades físicas como fuerza, velocidad y desplazamiento.
         </p>
       </div>
 
       <div class="vector-notation">
         <div class="vector-box">
-          <div class="vector-dimension">En 2 Dimensiones (ℝ²)</div>
-          <div class="math-display" style="margin: 10px 0; padding: 15px;">
+          <div class="vector-dimension">REPRESENTACIÓN EN 2 DIMENSIONES (ℝ²)</div>
+          <div class="math-display" style="margin: 20px 0; padding: 25px; font-size: 1.6rem;">
             \[\vec{v} = (v_1, v_2)\]
           </div>
-          <p style="color: var(--muted); font-size: 0.9rem;">
-            \(v_1\): componente en eje X<br>
-            \(v_2\): componente en eje Y
+          <p class="large-text">
+            <strong>\(v_1\):</strong> Componente horizontal (eje X)<br>
+            <strong>\(v_2\):</strong> Componente vertical (eje Y)<br><br>
+            <em>Ejemplo: \(\vec{u} = (2, 3)\) significa 2 unidades a la derecha y 3 unidades hacia arriba</em>
           </p>
         </div>
         
         <div class="vector-box">
-          <div class="vector-dimension">En 3 Dimensiones (ℝ³)</div>
-          <div class="math-display" style="margin: 10px 0; padding: 15px;">
+          <div class="vector-dimension">REPRESENTACIÓN EN 3 DIMENSIONES (ℝ³)</div>
+          <div class="math-display" style="margin: 20px 0; padding: 25px; font-size: 1.6rem;">
             \[\vec{v} = (v_1, v_2, v_3)\]
           </div>
-          <p style="color: var(--muted); font-size: 0.9rem;">
-            \(v_1\): componente en eje X<br>
-            \(v_2\): componente en eje Y<br>
-            \(v_3\): componente en eje Z
+          <p class="large-text">
+            <strong>\(v_1\):</strong> Componente en eje X (ancho)<br>
+            <strong>\(v_2\):</strong> Componente en eje Y (alto)<br>
+            <strong>\(v_3\):</strong> Componente en eje Z (profundidad)<br><br>
+            <em>Ejemplo: \(\vec{w} = (1, 2, 3)\) en espacio tridimensional</em>
           </p>
         </div>
       </div>
 
       <div class="explanation">
-        <div class="explanation-title">Ejemplo Práctico</div>
-        <p style="color: var(--muted); line-height: 1.8;">
-          Si tenemos el vector \(\vec{u} = (2, 3)\), esto significa: <strong>2 unidades hacia la derecha</strong> en el eje X 
-          y <strong>3 unidades hacia arriba</strong> en el eje Y. La longitud de este vector se calcula usando el teorema de Pitágoras.
+        <div class="explanation-title">INTERPRETACIÓN GEOMÉTRICA PRÁCTICA</div>
+        <p class="x-large-text">
+          Imagina que estás en un mapa: si te dicen "camina 3 cuadras al Este y 4 cuadras al Norte", esto se representa con el vector \(\vec{v} = (3, 4)\). 
+          La longitud total que caminaste es la <strong style="color: var(--accent-light);">norma del vector</strong>, que se calcula con el teorema de Pitágoras: 
+          \(\|\vec{v}\| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5\) cuadras.
         </p>
       </div>
     </section>
@@ -339,39 +395,42 @@
     <section class="card">
       <div class="card-header">
         <div class="card-icon">⚡</div>
-        <h2 class="card-title">2. Producto Escalar (Producto Punto)</h2>
+        <h2 class="card-title">2. PRODUCTO ESCALAR - DEFINICIÓN COMPLETA</h2>
       </div>
       
       <div class="explanation">
-        <div class="explanation-title">Definición</div>
-        <p style="color: var(--muted); line-height: 1.8;">
-          El <strong>producto escalar</strong> es una operación entre dos vectores que resulta en un <strong>número escalar</strong> 
-          (no un vector). Nos indica qué tan "alineados" están los vectores.
+        <div class="explanation-title">DEFINICIÓN FUNDAMENTAL</div>
+        <p class="x-large-text">
+          El <strong style="color: var(--accent-light);">producto escalar</strong> (también llamado producto punto) es una operación entre dos vectores que produce como resultado un 
+          <strong style="color: var(--accent-light);">ESCALAR</strong> (un número), no otro vector. Esta operación nos permite medir qué tan "alineados" o "paralelos" están dos vectores en el espacio.
         </p>
       </div>
 
-      <div class="math-display">
-        <p><strong>Fórmula General:</strong></p>
-        <p>\[\vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2 + u_3v_3\]</p>
+      <div class="math-display" style="font-size: 1.6rem;">
+        <p><strong>FÓRMULA GENERAL DEL PRODUCTO ESCALAR:</strong></p>
+        <p>\[\vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2 \quad \text{(en 2D)}\]</p>
+        <p>\[\vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2 + u_3v_3 \quad \text{(en 3D)}\]</p>
       </div>
 
       <div class="step-card">
         <div class="step-number">1</div>
-        <strong>Propiedades del Producto Escalar:</strong>
-        <ul style="color: var(--muted); margin-top: 15px; padding-left: 20px;">
-          <li style="margin-bottom: 10px;"><strong>Conmutativa:</strong> \(\vec{u} \cdot \vec{v} = \vec{v} \cdot \vec{u}\)</li>
-          <li style="margin-bottom: 10px;"><strong>Distributiva:</strong> \(\vec{u} \cdot (\vec{v} + \vec{w}) = \vec{u} \cdot \vec{v} + \vec{u} \cdot \vec{w}\)</li>
-          <li style="margin-bottom: 10px;"><strong>Si \(\vec{u} \cdot \vec{v} = 0\):</strong> Los vectores son perpendiculares</li>
-          <li><strong>\(\vec{u} \cdot \vec{u} = \|\vec{u}\|^2\):</strong> Producto consigo mismo da el cuadrado de la norma</li>
+        <strong style="font-size: 1.4rem;">PROPIEDADES MATEMÁTICAS ESENCIALES:</strong>
+        <ul class="x-large-text" style="margin-top: 20px; padding-left: 25px;">
+          <li style="margin-bottom: 15px;"><strong>Conmutativa:</strong> \(\vec{u} \cdot \vec{v} = \vec{v} \cdot \vec{u}\)</li>
+          <li style="margin-bottom: 15px;"><strong>Distributiva:</strong> \(\vec{u} \cdot (\vec{v} + \vec{w}) = \vec{u} \cdot \vec{v} + \vec{u} \cdot \vec{w}\)</li>
+          <li style="margin-bottom: 15px;"><strong>Asociativa con escalares:</strong> \((k\vec{u}) \cdot \vec{v} = k(\vec{u} \cdot \vec{v})\)</li>
+          <li style="margin-bottom: 15px;"><strong>Vector nulo:</strong> \(\vec{u} \cdot \vec{0} = 0\)</li>
+          <li><strong>Producto consigo mismo:</strong> \(\vec{u} \cdot \vec{u} = \|\vec{u}\|^2\)</li>
         </ul>
       </div>
 
       <div class="explanation">
-        <div class="explanation-title">Interpretación Geométrica</div>
-        <p style="color: var(--muted); line-height: 1.8;">
-          El producto escalar mide la <strong>proyección</strong> de un vector sobre el otro. 
-          Si el producto escalar es positivo, los vectores apuntan en direcciones similares. 
-          Si es negativo, apuntan en direcciones opuestas. Si es cero, son perpendiculares.
+        <div class="explanation-title">INTERPRETACIÓN GEOMÉTRICA AVANZADA</div>
+        <p class="x-large-text">
+          El producto escalar mide la <strong style="color: var(--accent-light);">proyección</strong> de un vector sobre la dirección del otro. 
+          Si \(\vec{u} \cdot \vec{v} > 0\), los vectores forman un ángulo agudo (menos de 90°). 
+          Si \(\vec{u} \cdot \vec{v} < 0\), forman un ángulo obtuso (más de 90°). 
+          Si \(\vec{u} \cdot \vec{v} = 0\), son <strong style="color: var(--accent-light);">perpendiculares</strong> (ángulo de exactamente 90°).
         </p>
       </div>
     </section>
@@ -380,37 +439,39 @@
     <section class="card">
       <div class="card-header">
         <div class="card-icon">📏</div>
-        <h2 class="card-title">3. Norma (Longitud) de un Vector</h2>
+        <h2 class="card-title">3. NORMA O MÓDULO DE UN VECTOR</h2>
       </div>
       
       <div class="explanation">
-        <div class="explanation-title">¿Qué es la Norma?</div>
-        <p style="color: var(--muted); line-height: 1.8;">
-          La <strong>norma</strong> o <strong>módulo</strong> de un vector es su <strong>longitud</strong>, 
-          es decir, la distancia desde el origen (0,0) hasta el punto final del vector.
+        <div class="explanation-title">CONCEPTO DE LONGITUD VECTORIAL</div>
+        <p class="x-large-text">
+          La <strong style="color: var(--accent-light);">norma</strong> (también llamada módulo, magnitud o longitud) de un vector es la distancia 
+          desde el punto de origen \((0,0)\) hasta el punto final del vector. Es una medida fundamental que siempre es un número no negativo.
         </p>
       </div>
 
-      <div class="math-display">
-        <p><strong>Fórmulas de la Norma:</strong></p>
-        <p>\[\|\vec{u}\| = \sqrt{u_1^2 + u_2^2} \quad \text{(en ℝ²)}\]</p>
-        <p>\[\|\vec{u}\| = \sqrt{u_1^2 + u_2^2 + u_3^2} \quad \text{(en ℝ³)}\]</p>
+      <div class="math-display" style="font-size: 1.6rem;">
+        <p><strong>FÓRMULAS DE LA NORMA VECTORIAL:</strong></p>
+        <p>\[\|\vec{u}\| = \sqrt{u_1^2 + u_2^2} \quad \text{(Distancia en el plano)}\]</p>
+        <p>\[\|\vec{u}\| = \sqrt{u_1^2 + u_2^2 + u_3^2} \quad \text{(Distancia en el espacio)}\]</p>
       </div>
 
       <div class="step-card">
         <div class="step-number">2</div>
-        <strong>Ejemplo de Cálculo de Norma:</strong>
-        <p style="color: var(--muted); margin-top: 10px;">
-          Para el vector \(\vec{u} = (3, 4)\):<br>
-          \(\|\vec{u}\| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5\)
+        <strong style="font-size: 1.4rem;">EJEMPLO DETALLADO DE CÁLCULO DE NORMA:</strong>
+        <p class="x-large-text" style="margin-top: 15px;">
+          Para el vector \(\vec{u} = (3, 4)\) en el plano:<br><br>
+          \(\|\vec{u}\| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5\)<br><br>
+          Esto significa que la "longitud" del vector desde el origen hasta el punto (3,4) es exactamente 5 unidades.
         </p>
       </div>
 
       <div class="explanation">
-        <div class="explanation-title">Relación con el Producto Escalar</div>
-        <p style="color: var(--muted); line-height: 1.8;">
-          La norma al cuadrado es igual al producto escalar del vector consigo mismo: 
-          \(\|\vec{u}\|^2 = \vec{u} \cdot \vec{u}\). Esto nos da una forma alternativa de calcular longitudes.
+        <div class="explanation-title">RELACIÓN CRUCIAL CON EL PRODUCTO ESCALAR</div>
+        <p class="x-large-text">
+          La norma al cuadrado es exactamente igual al producto escalar del vector consigo mismo: 
+          \(\|\vec{u}\|^2 = \vec{u} \cdot \vec{u}\). Esta relación nos proporciona un método alternativo y muy eficiente para calcular longitudes 
+          y distancias en espacios vectoriales de cualquier dimensión.
         </p>
       </div>
     </section>
@@ -419,34 +480,35 @@
     <section class="card">
       <div class="card-header">
         <div class="card-icon">📐</div>
-        <h2 class="card-title">4. Ángulo entre Dos Vectores</h2>
+        <h2 class="card-title">4. ÁNGULO ENTRE DOS VECTORES - RELACIÓN FUNDAMENTAL</h2>
       </div>
       
       <div class="explanation">
-        <div class="explanation-title">Relación Fundamental</div>
-        <p style="color: var(--muted); line-height: 1.8;">
-          Existe una relación directa entre el producto escalar y el ángulo entre dos vectores. 
-          Esta relación nos permite calcular el ángulo sin necesidad de medirlo gráficamente.
+        <div class="explanation-title">TEOREMA CENTRAL DEL ÁNGULO ENTRE VECTORES</div>
+        <p class="x-large-text">
+          Existe una relación matemática profunda y elegante entre el producto escalar y el ángulo entre dos vectores. 
+          Esta relación nos permite calcular el ángulo exacto sin necesidad de mediciones gráficas, usando únicamente álgebra.
         </p>
       </div>
 
-      <div class="math-display">
-        <p><strong>Fórmula del Coseno:</strong></p>
+      <div class="math-display" style="font-size: 1.6rem;">
+        <p><strong>FÓRMULA FUNDAMENTAL DEL COSENO:</strong></p>
         <p>\[\vec{u} \cdot \vec{v} = \|\vec{u}\| \|\vec{v}\| \cos\theta\]</p>
         
-        <p><strong>Despejando para el ángulo:</strong></p>
+        <p><strong>DESPEJANDO PARA EL ÁNGULO \(\theta\):</strong></p>
         <p>\[\cos\theta = \frac{\vec{u} \cdot \vec{v}}{\|\vec{u}\| \|\vec{v}\|}\]</p>
         <p>\[\theta = \cos^{-1} \left( \frac{\vec{u} \cdot \vec{v}}{\|\vec{u}\| \|\vec{v}\|} \right)\]</p>
       </div>
 
       <div class="step-card">
         <div class="step-number">3</div>
-        <strong>Interpretación del Resultado:</strong>
-        <ul style="color: var(--muted); margin-top: 15px; padding-left: 20px;">
-          <li style="margin-bottom: 10px;">Si \(\cos\theta = 1\): Vectores paralelos (\(\theta = 0^\circ\))</li>
-          <li style="margin-bottom: 10px;">Si \(\cos\theta = 0\): Vectores perpendiculares (\(\theta = 90^\circ\))</li>
-          <li style="margin-bottom: 10px;">Si \(\cos\theta = -1\): Vectores opuestos (\(\theta = 180^\circ\))</li>
-          <li>El ángulo siempre está entre \(0^\circ\) y \(180^\circ\)</li>
+        <strong style="font-size: 1.4rem;">INTERPRETACIÓN COMPLETA DEL RESULTADO:</strong>
+        <ul class="x-large-text" style="margin-top: 20px; padding-left: 25px;">
+          <li style="margin-bottom: 15px;">Si \(\cos\theta = 1\): Vectores <strong>paralelos</strong> (\(\theta = 0^\circ\)) - Misma dirección</li>
+          <li style="margin-bottom: 15px;">Si \(\cos\theta = 0\): Vectores <strong>perpendiculares</strong> (\(\theta = 90^\circ\)) - Forman ángulo recto</li>
+          <li style="margin-bottom: 15px;">Si \(\cos\theta = -1\): Vectores <strong>opuestos</strong> (\(\theta = 180^\circ\)) - Direcciones contrarias</li>
+          <li style="margin-bottom: 15px;">Si \(0 < \cos\theta < 1\): Ángulo <strong>agudo</strong> (\(0^\circ < \theta < 90^\circ\))</li>
+          <li>Si \(-1 < \cos\theta < 0\): Ángulo <strong>obtuso</strong> (\(90^\circ < \theta < 180^\circ\))</li>
         </ul>
       </div>
     </section>
@@ -455,48 +517,52 @@
     <section class="card">
       <div class="card-header">
         <div class="card-icon">📊</div>
-        <h2 class="card-title">5. Ejemplo Práctico en ℝ²</h2>
+        <h2 class="card-title">5. EJEMPLO PRÁCTICO COMPLETO EN EL PLANO ℝ²</h2>
       </div>
       
       <div class="explanation">
-        <div class="explanation-title">Problema</div>
-        <p style="color: var(--muted); line-height: 1.8;">
-          Calcular el producto escalar y el ángulo entre los vectores:<br>
-          \(\vec{D} = (2, 3)\) y \(\vec{V} = (5, 6)\)
+        <div class="explanation-title">PROBLEMA RESUELTO PASO A PASO</div>
+        <p class="x-large-text">
+          Calcular el producto escalar, las normas y el ángulo entre los siguientes vectores en el plano:<br>
+          <strong>\(\vec{D} = (2, 3)\)</strong> y <strong>\(\vec{V} = (5, 6)\)</strong>
         </p>
       </div>
 
       <div class="step-card">
         <div class="step-number">1</div>
-        <strong>Paso 1: Producto Escalar</strong>
-        <div class="math-display" style="margin: 15px 0;">
+        <strong style="font-size: 1.4rem;">PASO 1: CÁLCULO DEL PRODUCTO ESCALAR</strong>
+        <div class="math-display" style="margin: 20px 0; font-size: 1.6rem;">
           \[\vec{D} \cdot \vec{V} = (2)(5) + (3)(6) = 10 + 18 = 28\]
         </div>
+        <p class="large-text">El producto escalar es 28, lo que indica que los vectores forman un ángulo agudo (menos de 90°)</p>
       </div>
 
       <div class="step-card">
         <div class="step-number">2</div>
-        <strong>Paso 2: Calcular Normas</strong>
-        <div class="math-display" style="margin: 15px 0;">
+        <strong style="font-size: 1.4rem;">PASO 2: CÁLCULO DE LAS NORMAS DE LOS VECTORES</strong>
+        <div class="math-display" style="margin: 20px 0; font-size: 1.6rem;">
           \[\|\vec{D}\| = \sqrt{2^2 + 3^2} = \sqrt{4 + 9} = \sqrt{13}\]
           \[\|\vec{V}\| = \sqrt{5^2 + 6^2} = \sqrt{25 + 36} = \sqrt{61}\]
         </div>
+        <p class="large-text">La norma de \(\vec{D}\) es \(\sqrt{13}\) y la norma de \(\vec{V}\) es \(\sqrt{61}\)</p>
       </div>
 
       <div class="step-card">
         <div class="step-number">3</div>
-        <strong>Paso 3: Calcular Coseno del Ángulo</strong>
-        <div class="math-display" style="margin: 15px 0;">
+        <strong style="font-size: 1.4rem;">PASO 3: CÁLCULO DEL COSENO DEL ÁNGULO</strong>
+        <div class="math-display" style="margin: 20px 0; font-size: 1.6rem;">
           \[\cos\theta = \frac{28}{\sqrt{13} \cdot \sqrt{61}} = \frac{28}{\sqrt{793}}\]
         </div>
+        <p class="large-text">El coseno del ángulo entre los vectores es \(\frac{28}{\sqrt{793}}\)</p>
       </div>
 
       <div class="step-card">
         <div class="step-number">4</div>
-        <strong>Paso 4: Ángulo Resultante</strong>
-        <div class="math-display" style="margin: 15px 0;">
+        <strong style="font-size: 1.4rem;">PASO 4: DETERMINACIÓN DEL ÁNGULO FINAL</strong>
+        <div class="math-display" style="margin: 20px 0; font-size: 1.6rem;">
           \[\theta = \cos^{-1} \left( \frac{28}{\sqrt{793}} \right)\]
         </div>
+        <p class="large-text">El ángulo exacto se obtiene calculando el arcocoseno de la expresión anterior</p>
       </div>
     </section>
 
@@ -504,54 +570,58 @@
     <section class="card">
       <div class="card-header">
         <div class="card-icon">🚀</div>
-        <h2 class="card-title">6. Ejemplo Práctico en ℝ³</h2>
+        <h2 class="card-title">6. EJEMPLO PRÁCTICO COMPLETO EN EL ESPACIO ℝ³</h2>
       </div>
       
       <div class="explanation">
-        <div class="explanation-title">Problema</div>
-        <p style="color: var(--muted); line-height: 1.8;">
-          Calcular el producto escalar y el ángulo entre los vectores:<br>
-          \(\vec{A} = (5, 4, 7)\) y \(\vec{B} = (3, 6, 8)\)
+        <div class="explanation-title">PROBLEMA TRIDIMENSIONAL RESUELTO</div>
+        <p class="x-large-text">
+          Calcular el producto escalar, las normas y el ángulo entre los siguientes vectores en el espacio 3D:<br>
+          <strong>\(\vec{A} = (5, 4, 7)\)</strong> y <strong>\(\vec{B} = (3, 6, 8)\)</strong>
         </p>
       </div>
 
       <div class="step-card">
         <div class="step-number">1</div>
-        <strong>Paso 1: Producto Escalar</strong>
-        <div class="math-display" style="margin: 15px 0;">
+        <strong style="font-size: 1.4rem;">PASO 1: CÁLCULO DEL PRODUCTO ESCALAR EN 3D</strong>
+        <div class="math-display" style="margin: 20px 0; font-size: 1.6rem;">
           \[\vec{A} \cdot \vec{B} = (5)(3) + (4)(6) + (7)(8) = 15 + 24 + 56 = 95\]
         </div>
+        <p class="large-text">El producto escalar es 95, confirmando nuevamente un ángulo agudo entre los vectores</p>
       </div>
 
       <div class="step-card">
         <div class="step-number">2</div>
-        <strong>Paso 2: Calcular Normas</strong>
-        <div class="math-display" style="margin: 15px 0;">
+        <strong style="font-size: 1.4rem;">PASO 2: CÁLCULO DE NORMAS EN EL ESPACIO</strong>
+        <div class="math-display" style="margin: 20px 0; font-size: 1.6rem;">
           \[\|\vec{A}\| = \sqrt{5^2 + 4^2 + 7^2} = \sqrt{25 + 16 + 49} = \sqrt{90} = 3\sqrt{10}\]
           \[\|\vec{B}\| = \sqrt{3^2 + 6^2 + 8^2} = \sqrt{9 + 36 + 64} = \sqrt{109}\]
         </div>
+        <p class="large-text">Normas calculadas usando la extensión tridimensional del teorema de Pitágoras</p>
       </div>
 
       <div class="step-card">
         <div class="step-number">3</div>
-        <strong>Paso 3: Calcular Coseno del Ángulo</strong>
-        <div class="math-display" style="margin: 15px 0;">
+        <strong style="font-size: 1.4rem;">PASO 3: COSENO DEL ÁNGULO EN 3D</strong>
+        <div class="math-display" style="margin: 20px 0; font-size: 1.6rem;">
           \[\cos\theta = \frac{95}{3\sqrt{10} \cdot \sqrt{109}} = \frac{95}{3\sqrt{1090}}\]
         </div>
+        <p class="large-text">El coseno del ángulo se calcula de la misma forma que en 2D, pero con normas tridimensionales</p>
       </div>
 
       <div class="step-card">
         <div class="step-number">4</div>
-        <strong>Paso 4: Ángulo Resultante</strong>
-        <div class="math-display" style="margin: 15px 0;">
+        <strong style="font-size: 1.4rem;">PASO 4: ÁNGULO FINAL EN EL ESPACIO</strong>
+        <div class="math-display" style="margin: 20px 0; font-size: 1.6rem;">
           \[\theta = \cos^{-1} \left( \frac{95}{3\sqrt{1090}} \right)\]
         </div>
+        <p class="large-text">El ángulo entre los vectores en el espacio 3D se obtiene mediante arcocoseno</p>
       </div>
     </section>
 
     <footer class="footer">
-      <p>© 2024 Álgebra Lineal - Guía Completa de Producto Escalar y Ángulos entre Vectores</p>
-      <p style="margin-top: 8px; font-size: 0.875rem;">Material educativo para el estudio de matemáticas avanzadas</p>
+      <p style="font-size: 1.3rem;">© 2024 ÁLGEBRA LINEAL - GUÍA COMPLETA DE PRODUCTO ESCALAR Y ÁNGULOS ENTRE VECTORES</p>
+      <p style="margin-top: 15px; font-size: 1.1rem;">Material educativo avanzado para el estudio de matemáticas superiores</p>
     </footer>
   </div>
 </body>
