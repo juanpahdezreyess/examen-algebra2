@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Producto Escalar y Ángulo entre Vectores | Álgebra Lineal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e1524;
+      --card: #101a2c;
+      --muted: #9aa4b2;
+      --accent: #3b82f6;
+      --accent-dark: #1d4ed8;
+      --glass: rgba(255, 255, 255, 0.03);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, #0b1220 0%, #121d36 60%);
+      color: #e6eef6;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 12px;
+    }
+    @media (min-width: 768px) {
+      .container {
+        max-width: 1080px;
+        padding: 24px;
+        margin: 20px auto;
+      }
+    }
+    header {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      background: var(--card);
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    @media (min-width: 480px) {
+      header {
+        flex-direction: row;
+        text-align: left;
+        gap: 16px;
+      }
+    }
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    h1 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.3;
+    }
+    p.lead {
+      color: var(--muted);
+      margin: 6px 0 0;
+      font-size: 13px;
+    }
+    .card {
+      background: var(--card);
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.05);
+      margin-bottom: 16px;
+    }
+    .grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    @media (min-width: 900px) {
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 24px;
+      }
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 17px;
+      color: #fff;
+    }
+    .muted {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: var(--glass);
+      color: var(--accent);
+      font-weight: 600;
+      border: 1px solid rgba(59,130,246,0.2);
+      text-transform: uppercase;
+      font-size: 11px;
+      margin-top: 8px;
+    }
+    pre {
+      background: #071827;
+      padding: 10px;
+      border-radius: 6px;
+      overflow: auto;
+      color: #dff1f6;
+      font-size: 12px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      background: var(--glass);
+      font-size: 12px;
+    }
+    td, th {
+      padding: 6px 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      text-align: left;
+    }
+    th {
+      background: rgba(255,255,255,0.04);
+      font-weight: 600;
+    }
+    .verify {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+    .pill {
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--glass);
+      border: 1px solid rgba(255,255,255,0.05);
+      font-weight: 600;
+      color: #fff;
+      font-size: 12px;
+    }
+    footer {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 11px;
+      text-align: center;
+    }
+    .math {
+      background: rgba(255,255,255,0.02);
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 6px;
+      font-size: 13px;
+      overflow-x: auto;
+    }
+    .step-explanation {
+      background: rgba(255,255,255,0.03);
+      padding: 10px;
+      border-radius: 6px;
+      margin: 8px 0;
+      border-left: 3px solid var(--accent);
+      font-size: 13px;
+    }
+    ul.muted {
+      padding-left: 18px;
+      margin-top: 10px;
+    }
+    ul.muted li {
+      margin-bottom: 5px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">V</div>
+      <div>
+        <h1>Producto Escalar y Ángulo entre Vectores</h1>
+        <p class="lead">Álgebra Lineal - Aplicación práctica con ejemplos detallados</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="card">
+          <div class="card-header">
+            <div>
+              <h2>1. ¿Qué es un vector?</h2>
+              <p class="muted">Conceptos fundamentales y notación vectorial</p>
+            </div>
+            <div class="badge">Fundamentos</div>
+          </div>
+          <ul class="muted">
+            <li><strong>Vector:</strong> Entidad matemática con magnitud y dirección</li>
+            <li><strong>Notación:</strong> \(\vec{u} = (u_1, u_2)\) en 2D, \(\vec{u} = (u_1, u_2, u_3)\) en 3D</li>
+            <li><strong>Componentes:</strong> \(u_1\) (eje X), \(u_2\) (eje Y), \(u_3\) (eje Z)</li>
+            <li><strong>Ejemplo:</strong> \(\vec{u} = (2, 3)\) significa 2 unidades en X, 3 unidades en Y</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>2. Producto Escalar (Producto Punto)</h2>
+          <p class="muted">Operación que resulta en un número escalar, no un vector</p>
+          <div class="math">
+            <p><strong>Fórmula en \(\mathbb{R}^2\):</strong></p>
+            <p>\[\vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2\]</p>
+            
+            <p><strong>Fórmula en \(\mathbb{R}^3\):</strong></p>
+            <p>\[\vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2 + u_3v_3\]</p>
+          </div>
+          <div class="step-explanation">
+            <strong>Interpretación:</strong> El producto escalar mide qué tan "alineados" están dos vectores. Si es cero, los vectores son perpendiculares.
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>3. Norma (Longitud) de un Vector</h2>
+          <p class="muted">Distancia desde el origen hasta el punto final del vector</p>
+          <div class="math">
+            <p><strong>En \(\mathbb{R}^2\):</strong></p>
+            <p>\[\|\vec{u}\| = \sqrt{u_1^2 + u_2^2}\]</p>
+            
+            <p><strong>En \(\mathbb{R}^3\):</strong></p>
+            <p>\[\|\vec{u}\| = \sqrt{u_1^2 + u_2^2 + u_3^2}\]</p>
+          </div>
+          <div class="step-explanation">
+            <strong>Ejemplo:</strong> Para \(\vec{u} = (3, 4)\), \(\|\vec{u}\| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5\)
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>4. Ángulo entre Dos Vectores</h2>
+          <p class="muted">Relación fundamental entre producto escalar y ángulo</p>
+          <div class="math">
+            <p><strong>Fórmula del coseno:</strong></p>
+            <p>\[\vec{u} \cdot \vec{v} = \|\vec{u}\| \|\vec{v}\| \cos\theta\]</p>
+            
+            <p><strong>Despejando para \(\theta\):</strong></p>
+            <p>\[\cos\theta = \frac{\vec{u} \cdot \vec{v}}{\|\vec{u}\| \|\vec{v}\|}\]</p>
+            
+            <p>\[\theta = \cos^{-1} \left( \frac{\vec{u} \cdot \vec{v}}{\|\vec{u}\| \|\vec{v}\|} \right)\]</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>5. Ejemplo Práctico - \(\mathbb{R}^2\)</h2>
+          <p class="muted">Vectores: \(\vec{D} = (2, 3)\) y \(\vec{V} = (5, 6)\)</p>
+          <div class="math">
+            <p><strong>Paso 1: Producto escalar</strong></p>
+            <p>\[\vec{D} \cdot \vec{V} = (2)(5) + (3)(6) = 10 + 18 = 28\]</p>
+
+            <p><strong>Paso 2: Normas de los vectores</strong></p>
+            <p>\[\|\vec{D}\| = \sqrt{2^2 + 3^2} = \sqrt{4 + 9} = \sqrt{13}\]</p>
+            <p>\[\|\vec{V}\| = \sqrt{5^2 + 6^2} = \sqrt{25 + 36} = \sqrt{61}\]</p>
+
+            <p><strong>Paso 3: Coseno del ángulo</strong></p>
+            <p>\[\cos\theta = \frac{28}{\sqrt{13} \cdot \sqrt{61}} = \frac{28}{\sqrt{793}}\]</p>
+
+            <p><strong>Paso 4: Ángulo resultante</strong></p>
+            <p>\[\theta = \cos^{-1} \left( \frac{28}{\sqrt{793}} \right)\]</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>6. Ejemplo Práctico - \(\mathbb{R}^3\)</h2>
+          <p class="muted">Vectores: \(\vec{A} = (5, 4, 7)\) y \(\vec{B} = (3, 6, 8)\)</p>
+          <div class="math">
+            <p><strong>Paso 1: Producto escalar</strong></p>
+            <p>\[\vec{A} \cdot \vec{B} = (5)(3) + (4)(6) + (7)(8) = 15 + 24 + 56 = 95\]</p>
+
+            <p><strong>Paso 2: Normas de los vectores</strong></p>
+            <p>\[\|\vec{A}\| = \sqrt{5^2 + 4^2 + 7^2} = \sqrt{25 + 16 + 49} = \sqrt{90} = 3\sqrt{10}\]</p>
+            <p>\[\|\vec{B}\| = \sqrt{3^2 + 6^2 + 8^2} = \sqrt{9 + 36 + 64} = \sqrt{109}\]</p>
+
+            <p><strong>Paso 3: Coseno del ángulo</strong></p>
+            <p>\[\cos\theta = \frac{95}{3\sqrt{10} \cdot \sqrt{109}} = \frac{95}{3\sqrt{1090}}\]</p>
+
+            <p><strong>Paso 4: Ángulo resultante</strong></p>
+            <p>\[\theta = \cos^{-1} \left( \frac{95}{3\sqrt{1090}} \right)\]</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>7. Aplicaciones en la Vida Real</h2>
+          <table>
+            <tr><th>Área</th><th>Aplicación del Producto Escalar</th></tr>
+            <tr><td>Física</td><td>Cálculo de trabajo mecánico</td></tr>
+            <tr><td>Gráficos 3D</td><td>Iluminación y sombreado</td></tr>
+            <tr><td>Robótica</td><td>Cálculo de fuerzas y torques</td></tr>
+            <tr><td>Navegación</td><td>Dirección entre puntos GPS</td></tr>
+            <tr><td>Machine Learning</td><td>Similitud entre vectores</td></tr>
+          </table>
+        </section>
+      </main>
+
+      <aside class="toc card">
+        <h2>Resumen de Fórmulas</h2>
+        <div class="verify">
+          <div class="pill">Producto Escalar</div>
+          <div class="pill">Norma</div>
+          <div class="pill">Ángulo</div>
+        </div>
+
+        <h2 style="margin-top:20px">Resultados Ejemplos</h2>
+        <ul class="muted">
+          <li><strong>ℝ²:</strong> Producto = 28</li>
+          <li><strong>ℝ²:</strong> Ángulo = \(\cos^{-1}(\frac{28}{\sqrt{793}})\)</li>
+          <li><strong>ℝ³:</strong> Producto = 95</li>
+          <li><strong>ℝ³:</strong> Ángulo = \(\cos^{-1}(\frac{95}{3\sqrt{1090}})\)</li>
+        </ul>
+
+        <h2 style="margin-top:20px">Propiedades Clave</h2>
+        <ul class="muted">
+          <li>Conmutativo: \(\vec{u} \cdot \vec{v} = \vec{v} \cdot \vec{u}\)</li>
+          <li>Distributivo: \(\vec{u} \cdot (\vec{v} + \vec{w}) = \vec{u} \cdot \vec{v} + \vec{u} \cdot \vec{w}\)</li>
+          <li>Si \(\vec{u} \cdot \vec{v} = 0\), son perpendiculares</li>
+          <li>\(\vec{u} \cdot \vec{u} = \|\vec{u}\|^2\)</li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer>
+      <p>Álgebra Lineal - Producto Escalar y Ángulo entre Vectores</p>
+    </footer>
+  </div>
+</body>
+</html>
