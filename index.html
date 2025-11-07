@@ -127,7 +127,7 @@
             margin: 10px 0;
         }
         
-        .formula-explanation {
+        .calculation {
             background: rgba(99, 102, 241, 0.1);
             border: 1px solid rgba(99, 102, 241, 0.3);
             border-radius: 10px;
@@ -198,29 +198,26 @@
                 <strong>Ángulo entre vectores:</strong>
                 <div class="math">
                     \[\cos\theta = \frac{\vec{D} \cdot \vec{V}}{\|\vec{D}\| \|\vec{V}\|} = \frac{28}{\sqrt{13} \cdot \sqrt{61}} = \frac{28}{\sqrt{793}}\]
-                    \[\theta = \cos^{-1}\left(\frac{28}{\sqrt{793}}\right)\]
                 </div>
-                <div class="formula-explanation">
-                    <p><strong>Explicación de la fórmula:</strong></p>
-                    <p>El producto escalar está relacionado con el ángulo mediante:</p>
-                    <div class="math" style="margin: 10px 0;">
-                        \[\vec{u} \cdot \vec{v} = \|\vec{u}\| \|\vec{v}\| \cos\theta\]
-                    </div>
-                    <p>Despejando el coseno:</p>
-                    <div class="math" style="margin: 10px 0;">
-                        \[\cos\theta = \frac{\vec{u} \cdot \vec{v}}{\|\vec{u}\| \|\vec{v}\|}\]
-                    </div>
-                    <p>Esta fórmula nos permite calcular el ángulo entre dos vectores usando solo sus componentes, sin necesidad de mediciones geométricas.</p>
-                </div>
+                <p class="explanation">Aplicamos la fórmula fundamental.</p>
             </div>
 
             <div class="result">
-                <div class="result-title">RESULTADOS ℝ²:</div>
-                <div class="math">
-                    <p>Producto escalar: 28</p>
-                    <p>Ángulo: ≈ 6.8°</p>
+                <div class="result-title">RESULTADOS FINALES ℝ²:</div>
+                <div class="calculation">
+                    <p><strong>De dónde sacamos el ángulo de 6.8°:</strong></p>
+                    <div class="math">
+                        \[\theta = \cos^{-1}\left(\frac{28}{\sqrt{793}}\right)\]
+                        \[\theta = \cos^{-1}\left(\frac{28}{28.178}\right)\]
+                        \[\theta = \cos^{-1}(0.993)\]
+                        \[\theta = 6.8^\circ\]
+                    </div>
+                    <p class="explanation">Usamos calculadora científica para calcular: √793 ≈ 28.178, luego 28 ÷ 28.178 ≈ 0.993, y finalmente cos⁻¹(0.993) ≈ 6.8°</p>
                 </div>
-                <p class="explanation">Producto positivo → ángulo agudo. Vectores casi paralelos.</p>
+                <div class="math">
+                    <p><strong>Producto escalar:</strong> 28</p>
+                    <p><strong>Ángulo:</strong> 6.8°</p>
+                </div>
             </div>
         </section>
 
@@ -262,28 +259,27 @@
                 <strong>Ángulo entre vectores:</strong>
                 <div class="math">
                     \[\cos\theta = \frac{\vec{A} \cdot \vec{B}}{\|\vec{A}\| \|\vec{B}\|} = \frac{95}{3\sqrt{10} \cdot \sqrt{109}} = \frac{95}{3\sqrt{1090}}\]
-                    \[\theta = \cos^{-1}\left(\frac{95}{3\sqrt{1090}}\right)\]
                 </div>
-                <div class="formula-explanation">
-                    <p><strong>Relación fundamental:</strong></p>
-                    <p>La misma fórmula aplica en 3D:</p>
-                    <div class="math" style="margin: 10px 0;">
-                        \[\vec{A} \cdot \vec{B} = \|\vec{A}\| \|\vec{B}\| \cos\theta\]
-                    </div>
-                    <p>El producto escalar mide la proyección de un vector sobre la dirección del otro, escalada por sus longitudes.</p>
-                    <p>Cuando \(\cos\theta = 1\): vectores paralelos (misma dirección)</p>
-                    <p>Cuando \(\cos\theta = 0\): vectores perpendiculares (90°)</p>
-                    <p>Cuando \(\cos\theta = -1\): vectores opuestos (180°)</p>
-                </div>
+                <p class="explanation">Aplicamos la misma fórmula que en 2D.</p>
             </div>
 
             <div class="result">
-                <div class="result-title">RESULTADOS ℝ³:</div>
-                <div class="math">
-                    <p>Producto escalar: 95</p>
-                    <p>Ángulo: ≈ 16.3°</p>
+                <div class="result-title">RESULTADOS FINALES ℝ³:</div>
+                <div class="calculation">
+                    <p><strong>De dónde sacamos el ángulo de 16.3°:</strong></p>
+                    <div class="math">
+                        \[\theta = \cos^{-1}\left(\frac{95}{3\sqrt{1090}}\right)\]
+                        \[\theta = \cos^{-1}\left(\frac{95}{3 \times 33.015}\right)\]
+                        \[\theta = \cos^{-1}\left(\frac{95}{99.045}\right)\]
+                        \[\theta = \cos^{-1}(0.959)\]
+                        \[\theta = 16.3^\circ\]
+                    </div>
+                    <p class="explanation">Usamos calculadora científica para calcular: √1090 ≈ 33.015, luego 3 × 33.015 = 99.045, después 95 ÷ 99.045 ≈ 0.959, y finalmente cos⁻¹(0.959) ≈ 16.3°</p>
                 </div>
-                <p class="explanation">Ángulo mayor que en 2D debido a la tercera dimensión.</p>
+                <div class="math">
+                    <p><strong>Producto escalar:</strong> 95</p>
+                    <p><strong>Ángulo:</strong> 16.3°</p>
+                </div>
             </div>
         </section>
     </div>
