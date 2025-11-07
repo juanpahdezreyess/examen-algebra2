@@ -170,6 +170,28 @@
             font-size: 1.6rem;
         }
 
+        .important-note {
+            background: rgba(245, 158, 11, 0.15);
+            border: 2px solid rgba(245, 158, 11, 0.4);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .important-note-title {
+            color: #f59e0b;
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .important-note-title::before {
+            content: '💡';
+            margin-right: 10px;
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 2px;
@@ -260,12 +282,35 @@
 
             <div class="step">
                 <div class="step-number">3</div>
-                <strong>Normas:</strong>
+                <strong>Normas (Longitudes):</strong>
                 <div class="math">
                     \[\|\vec{D}\| = \sqrt{2^2 + 3^2} = \sqrt{4 + 9} = \sqrt{13}\]
                     \[\|\vec{V}\| = \sqrt{5^2 + 6^2} = \sqrt{25 + 36} = \sqrt{61}\]
                 </div>
-                <p class="large-text">Longitud de cada vector (teorema de Pitágoras).</p>
+                <div class="calculation">
+                    <p style="font-size: 1.5rem;"><strong>De dónde salen las normas:</strong></p>
+                    <div class="math">
+                        \[\|\vec{D}\| = \sqrt{2^2 + 3^2} = \sqrt{4 + 9} = \sqrt{13} \approx 3.606\]
+                        \[\|\vec{V}\| = \sqrt{5^2 + 6^2} = \sqrt{25 + 36} = \sqrt{61} \approx 7.810\]
+                    </div>
+                    <p class="large-text">Usamos el <strong>Teorema de Pitágoras</strong> para calcular las longitudes:<br>
+                    <strong>√13:</strong> √(4 + 9) = √13 ≈ 3.606<br>
+                    <strong>√61:</strong> √(25 + 36) = √61 ≈ 7.810</p>
+                </div>
+                <div class="important-note">
+                    <div class="important-note-title">¿PARA QUÉ NECESITAMOS LAS NORMAS?</div>
+                    <p class="large-text">
+                        Las normas (longitudes de los vectores) son <strong>esenciales</strong> para calcular el ángulo entre vectores usando la fórmula:
+                    </p>
+                    <div class="math" style="margin: 15px 0;">
+                        \[\cos\theta = \frac{\vec{u} \cdot \vec{v}}{\|\vec{u}\| \|\vec{v}\|}\]
+                    </div>
+                    <p class="large-text">
+                        Sin las normas, no podríamos normalizar el producto escalar y obtener el coseno del ángulo. 
+                        Las normas nos permiten "escalar" el producto escalar para que el resultado esté entre -1 y 1, 
+                        que es el rango del coseno.
+                    </p>
+                </div>
             </div>
 
             <div class="step">
@@ -287,7 +332,10 @@
                         \[\theta = \cos^{-1}(0.993)\]
                         \[\theta = 6.8^\circ\]
                     </div>
-                    <p class="large-text">Usamos calculadora científica para calcular: √793 ≈ 28.178, luego 28 ÷ 28.178 ≈ 0.993, y finalmente cos⁻¹(0.993) ≈ 6.8°</p>
+                    <p class="large-text">Usamos calculadora científica para calcular:<br>
+                    <strong>√793:</strong> √793 ≈ 28.178<br>
+                    <strong>División:</strong> 28 ÷ 28.178 ≈ 0.993<br>
+                    <strong>Arco coseno:</strong> cos⁻¹(0.993) ≈ 6.8°</p>
                 </div>
                 <div class="math">
                     <p style="font-size: 1.5rem;"><strong>Producto escalar:</strong> 28</p>
@@ -330,12 +378,33 @@
 
             <div class="step">
                 <div class="step-number">3</div>
-                <strong>Normas:</strong>
+                <strong>Normas (Longitudes):</strong>
                 <div class="math">
                     \[\|\vec{A}\| = \sqrt{5^2 + 4^2 + 7^2} = \sqrt{25 + 16 + 49} = \sqrt{90} = 3\sqrt{10}\]
                     \[\|\vec{B}\| = \sqrt{3^2 + 6^2 + 8^2} = \sqrt{9 + 36 + 64} = \sqrt{109}\]
                 </div>
-                <p class="large-text">Pitágoras extendido a 3 dimensiones.</p>
+                <div class="calculation">
+                    <p style="font-size: 1.5rem;"><strong>De dónde salen las normas:</strong></p>
+                    <div class="math">
+                        \[\|\vec{A}\| = \sqrt{5^2 + 4^2 + 7^2} = \sqrt{25 + 16 + 49} = \sqrt{90} = 3\sqrt{10} \approx 9.487\]
+                        \[\|\vec{B}\| = \sqrt{3^2 + 6^2 + 8^2} = \sqrt{9 + 36 + 64} = \sqrt{109} \approx 10.440\]
+                    </div>
+                    <p class="large-text">Usamos el <strong>Teorema de Pitágoras extendido a 3D</strong>:<br>
+                    <strong>√90:</strong> √(25 + 16 + 49) = √90 ≈ 9.487<br>
+                    <strong>√109:</strong> √(9 + 36 + 64) = √109 ≈ 10.440</p>
+                </div>
+                <div class="important-note">
+                    <div class="important-note-title">FUNCIÓN DE LAS NORMAS EN EL CÁLCULO</div>
+                    <p class="large-text">
+                        Las normas son <strong>fundamentales</strong> porque:
+                    </p>
+                    <ul class="large-text" style="margin: 10px 0; padding-left: 20px;">
+                        <li>Nos dan la longitud real de cada vector</li>
+                        <li>Permiten normalizar el producto escalar</li>
+                        <li>Hacen posible que cosθ esté en el rango [-1, 1]</li>
+                        <li>Sin ellas, el producto escalar solo dependería de las componentes, no del ángulo</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="step">
@@ -358,7 +427,11 @@
                         \[\theta = \cos^{-1}(0.959)\]
                         \[\theta = 16.3^\circ\]
                     </div>
-                    <p class="large-text">Usamos calculadora científica para calcular: √1090 ≈ 33.015, luego 3 × 33.015 = 99.045, después 95 ÷ 99.045 ≈ 0.959, y finalmente cos⁻¹(0.959) ≈ 16.3°</p>
+                    <p class="large-text">Usamos calculadora científica para calcular:<br>
+                    <strong>√1090:</strong> √1090 ≈ 33.015<br>
+                    <strong>Multiplicación:</strong> 3 × 33.015 = 99.045<br>
+                    <strong>División:</strong> 95 ÷ 99.045 ≈ 0.959<br>
+                    <strong>Arco coseno:</strong> cos⁻¹(0.959) ≈ 16.3°</p>
                 </div>
                 <div class="math">
                     <p style="font-size: 1.5rem;"><strong>Producto escalar:</strong> 95</p>
