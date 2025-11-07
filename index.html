@@ -56,6 +56,28 @@
             margin-bottom: 10px;
         }
         
+        .intro {
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+        
+        .intro-title {
+            color: var(--accent-light);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .intro-title::before {
+            content: '🎯';
+            margin-right: 10px;
+        }
+        
         .card {
             background: var(--card);
             border-radius: 15px;
@@ -159,6 +181,19 @@
             <h1 class="hero-title">EJERCICIO 12</h1>
             <p class="explanation">Producto escalar y ángulo entre vectores</p>
         </header>
+
+        <!-- Introducción -->
+        <section class="intro">
+            <div class="intro-title">OBJETIVO DEL EJERCICIO</div>
+            <p class="explanation" style="font-size: 1.1rem;">
+                Vamos a calcular el <strong>producto escalar</strong> y el <strong>ángulo</strong> entre pares de vectores en 2D y 3D. 
+                El producto escalar nos indica qué tan alineados están los vectores, y el ángulo nos da la medida exacta de separación entre ellos.
+            </p>
+            <p class="explanation" style="font-size: 1.1rem;">
+                <strong>Procedimiento:</strong> Calcularemos el producto escalar multiplicando componentes, luego las normas (longitudes) de los vectores, 
+                y finalmente usaremos la fórmula del coseno para encontrar el ángulo.
+            </p>
+        </section>
 
         <!-- Parte A: Vectores en R² -->
         <section class="card">
