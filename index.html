@@ -127,6 +127,14 @@
             margin: 10px 0;
         }
         
+        .formula-explanation {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2rem;
@@ -187,12 +195,23 @@
 
             <div class="step">
                 <div class="step-number">4</div>
-                <strong>Ángulo:</strong>
+                <strong>Ángulo entre vectores:</strong>
                 <div class="math">
-                    \[\cos\theta = \frac{28}{\sqrt{13} \cdot \sqrt{61}} = \frac{28}{\sqrt{793}}\]
+                    \[\cos\theta = \frac{\vec{D} \cdot \vec{V}}{\|\vec{D}\| \|\vec{V}\|} = \frac{28}{\sqrt{13} \cdot \sqrt{61}} = \frac{28}{\sqrt{793}}\]
                     \[\theta = \cos^{-1}\left(\frac{28}{\sqrt{793}}\right)\]
                 </div>
-                <p class="explanation">Fórmula que relaciona producto escalar con ángulo.</p>
+                <div class="formula-explanation">
+                    <p><strong>Explicación de la fórmula:</strong></p>
+                    <p>El producto escalar está relacionado con el ángulo mediante:</p>
+                    <div class="math" style="margin: 10px 0;">
+                        \[\vec{u} \cdot \vec{v} = \|\vec{u}\| \|\vec{v}\| \cos\theta\]
+                    </div>
+                    <p>Despejando el coseno:</p>
+                    <div class="math" style="margin: 10px 0;">
+                        \[\cos\theta = \frac{\vec{u} \cdot \vec{v}}{\|\vec{u}\| \|\vec{v}\|}\]
+                    </div>
+                    <p>Esta fórmula nos permite calcular el ángulo entre dos vectores usando solo sus componentes, sin necesidad de mediciones geométricas.</p>
+                </div>
             </div>
 
             <div class="result">
@@ -240,12 +259,22 @@
 
             <div class="step">
                 <div class="step-number">4</div>
-                <strong>Ángulo:</strong>
+                <strong>Ángulo entre vectores:</strong>
                 <div class="math">
-                    \[\cos\theta = \frac{95}{3\sqrt{10} \cdot \sqrt{109}} = \frac{95}{3\sqrt{1090}}\]
+                    \[\cos\theta = \frac{\vec{A} \cdot \vec{B}}{\|\vec{A}\| \|\vec{B}\|} = \frac{95}{3\sqrt{10} \cdot \sqrt{109}} = \frac{95}{3\sqrt{1090}}\]
                     \[\theta = \cos^{-1}\left(\frac{95}{3\sqrt{1090}}\right)\]
                 </div>
-                <p class="explanation">Misma fórmula que en 2D, con normas 3D.</p>
+                <div class="formula-explanation">
+                    <p><strong>Relación fundamental:</strong></p>
+                    <p>La misma fórmula aplica en 3D:</p>
+                    <div class="math" style="margin: 10px 0;">
+                        \[\vec{A} \cdot \vec{B} = \|\vec{A}\| \|\vec{B}\| \cos\theta\]
+                    </div>
+                    <p>El producto escalar mide la proyección de un vector sobre la dirección del otro, escalada por sus longitudes.</p>
+                    <p>Cuando \(\cos\theta = 1\): vectores paralelos (misma dirección)</p>
+                    <p>Cuando \(\cos\theta = 0\): vectores perpendiculares (90°)</p>
+                    <p>Cuando \(\cos\theta = -1\): vectores opuestos (180°)</p>
+                </div>
             </div>
 
             <div class="result">
@@ -257,23 +286,6 @@
                 <p class="explanation">Ángulo mayor que en 2D debido a la tercera dimensión.</p>
             </div>
         </section>
-
-        <!-- Fórmulas -->
-        <section class="card">
-            <h2 class="card-title">FÓRMULAS UTILIZADAS</h2>
-            <div class="math">
-                <p><strong>Producto escalar:</strong></p>
-                <p>\(\vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2\) (2D)</p>
-                <p>\(\vec{u} \cdot \vec{v} = u_1v_1 + u_2v_2 + u_3v_3\) (3D)</p>
-                
-                <p><strong>Norma:</strong></p>
-                <p>\(\|\vec{u}\| = \sqrt{u_1^2 + u_2^2}\) (2D)</p>
-                <p>\(\|\vec{u}\| = \sqrt{u_1^2 + u_2^2 + u_3^2}\) (3D)</p>
-                
-                <p><strong>Ángulo:</strong></p>
-                <p>\(\cos\theta = \frac{\vec{u} \cdot \vec{v}}{\|\vec{u}\| \|\vec{v}\|}\)</p>
-            </div>
-        </section>
     </div>
 </body>
-</html>s
+</html>
