@@ -30,145 +30,161 @@
             color: #f1f5f9;
             line-height: 1.6;
             min-height: 100vh;
-            padding: 20px;
+            padding: 10px;
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
         .hero {
             text-align: center;
-            padding: 40px;
+            padding: 50px 30px;
             background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
-            border-radius: 20px;
+            border-radius: 25px;
             margin-bottom: 30px;
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            border: 2px solid rgba(99, 102, 241, 0.3);
         }
         
         .hero-title {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 3.5rem;
+            font-weight: 800;
             background: var(--gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         
         .intro {
-            background: rgba(99, 102, 241, 0.1);
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 25px;
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            background: rgba(99, 102, 241, 0.15);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            border: 2px solid rgba(99, 102, 241, 0.4);
         }
         
         .intro-title {
             color: var(--accent-light);
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 15px;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
         }
         
         .intro-title::before {
             content: '🎯';
-            margin-right: 10px;
+            margin-right: 15px;
+            font-size: 1.8rem;
         }
         
         .card {
             background: var(--card);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 25px;
-            border-left: 4px solid var(--accent);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-left: 6px solid var(--accent);
         }
         
         .card-title {
-            font-size: 1.5rem;
+            font-size: 2.2rem;
             color: var(--accent-light);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             display: flex;
             align-items: center;
         }
         
         .card-title::before {
             content: '📌';
-            margin-right: 10px;
+            margin-right: 15px;
+            font-size: 1.8rem;
         }
         
         .step {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
         }
         
         .step-number {
             display: inline-block;
-            width: 30px;
-            height: 30px;
+            width: 50px;
+            height: 50px;
             background: var(--accent);
             border-radius: 50%;
             text-align: center;
-            line-height: 30px;
-            font-weight: 600;
-            margin-right: 10px;
-            font-size: 0.9rem;
+            line-height: 50px;
+            font-weight: 700;
+            margin-right: 15px;
+            font-size: 1.3rem;
         }
         
         .math {
             background: rgba(15, 23, 42, 0.9);
-            border: 2px solid rgba(99, 102, 241, 0.3);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 15px 0;
-            font-size: 1.1rem;
+            border: 3px solid rgba(99, 102, 241, 0.4);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            font-size: 1.4rem;
             text-align: center;
         }
         
         .result {
-            background: rgba(16, 185, 129, 0.1);
-            border: 2px solid rgba(16, 185, 129, 0.3);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
+            background: rgba(16, 185, 129, 0.15);
+            border: 3px solid rgba(16, 185, 129, 0.4);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 25px 0;
         }
         
         .result-title {
             color: var(--success);
-            font-weight: 600;
-            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
         }
         
         .explanation {
             color: var(--muted);
-            font-size: 1rem;
-            margin: 10px 0;
+            font-size: 1.2rem;
+            margin: 15px 0;
+            line-height: 1.7;
         }
         
         .calculation {
-            background: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            border-radius: 10px;
-            padding: 15px;
-            margin: 15px 0;
+            background: rgba(99, 102, 241, 0.15);
+            border: 2px solid rgba(99, 102, 241, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .large-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
         }
         
         @media (max-width: 768px) {
             .hero-title {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             
             .card {
-                padding: 20px;
+                padding: 25px;
             }
             
             .math {
-                padding: 15px;
-                font-size: 1rem;
+                padding: 20px;
+                font-size: 1.2rem;
+            }
+            
+            .step-number {
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -179,17 +195,17 @@
     <div class="container">
         <header class="hero">
             <h1 class="hero-title">EJERCICIO 12</h1>
-            <p class="explanation">Producto escalar y ángulo entre vectores</p>
+            <p class="explanation" style="font-size: 1.4rem;">Producto escalar y ángulo entre vectores</p>
         </header>
 
         <!-- Introducción -->
         <section class="intro">
             <div class="intro-title">OBJETIVO DEL EJERCICIO</div>
-            <p class="explanation" style="font-size: 1.1rem;">
-                Vamos a calcular el <strong>producto escalar</strong> y el <strong>ángulo</strong> entre pares de vectores en 2D y 3D. 
+            <p class="large-text">
+                Vamos a calcular el <strong style="color: var(--accent-light);">producto escalar</strong> y el <strong style="color: var(--accent-light);">ángulo</strong> entre pares de vectores en 2D y 3D. 
                 El producto escalar nos indica qué tan alineados están los vectores, y el ángulo nos da la medida exacta de separación entre ellos.
             </p>
-            <p class="explanation" style="font-size: 1.1rem;">
+            <p class="large-text">
                 <strong>Procedimiento:</strong> Calcularemos el producto escalar multiplicando componentes, luego las normas (longitudes) de los vectores, 
                 y finalmente usaremos la fórmula del coseno para encontrar el ángulo.
             </p>
@@ -198,11 +214,11 @@
         <!-- Parte A: Vectores en R² -->
         <section class="card">
             <h2 class="card-title">PARTE A: VECTORES EN ℝ²</h2>
-            <p class="explanation">Puntos: D(2,3) y V(5,6)</p>
+            <p class="explanation" style="font-size: 1.3rem;">Puntos: D(2,3) y V(5,6)</p>
             
             <div class="step">
                 <div class="step-number">1</div>
-                <strong>Vectores:</strong>
+                <strong style="font-size: 1.4rem;">Vectores:</strong>
                 <div class="math">
                     \[\vec{D} = (2, 3)\]
                     \[\vec{V} = (5, 6)\]
@@ -211,55 +227,55 @@
 
             <div class="step">
                 <div class="step-number">2</div>
-                <strong>Producto escalar:</strong>
+                <strong style="font-size: 1.4rem;">Producto escalar:</strong>
                 <div class="calculation">
-                    <p><strong>De dónde sale el producto escalar 28:</strong></p>
+                    <p style="font-size: 1.3rem;"><strong>De dónde sale el producto escalar 28:</strong></p>
                     <div class="math">
                         \[\vec{D} \cdot \vec{V} = (2)(5) + (3)(6)\]
                         \[= 10 + 18\]
                         \[= 28\]
                     </div>
-                    <p class="explanation">El producto escalar se calcula multiplicando las componentes correspondientes:<br>
-                    Componente x: 2 × 5 = 10<br>
-                    Componente y: 3 × 6 = 18<br>
-                    Suma total: 10 + 18 = 28</p>
+                    <p class="large-text">El producto escalar se calcula multiplicando las componentes correspondientes:<br>
+                    <strong>Componente x:</strong> 2 × 5 = 10<br>
+                    <strong>Componente y:</strong> 3 × 6 = 18<br>
+                    <strong>Suma total:</strong> 10 + 18 = 28</p>
                 </div>
             </div>
 
             <div class="step">
                 <div class="step-number">3</div>
-                <strong>Normas:</strong>
+                <strong style="font-size: 1.4rem;">Normas:</strong>
                 <div class="math">
                     \[\|\vec{D}\| = \sqrt{2^2 + 3^2} = \sqrt{4 + 9} = \sqrt{13}\]
                     \[\|\vec{V}\| = \sqrt{5^2 + 6^2} = \sqrt{25 + 36} = \sqrt{61}\]
                 </div>
-                <p class="explanation">Longitud de cada vector (teorema de Pitágoras).</p>
+                <p class="large-text">Longitud de cada vector (teorema de Pitágoras).</p>
             </div>
 
             <div class="step">
                 <div class="step-number">4</div>
-                <strong>Ángulo entre vectores:</strong>
+                <strong style="font-size: 1.4rem;">Ángulo entre vectores:</strong>
                 <div class="math">
                     \[\cos\theta = \frac{\vec{D} \cdot \vec{V}}{\|\vec{D}\| \|\vec{V}\|} = \frac{28}{\sqrt{13} \cdot \sqrt{61}} = \frac{28}{\sqrt{793}}\]
                 </div>
-                <p class="explanation">Aplicamos la fórmula fundamental.</p>
+                <p class="large-text">Aplicamos la fórmula fundamental que relaciona producto escalar con ángulo.</p>
             </div>
 
             <div class="result">
-                <div class="result-title">RESULTADOS FINALES ℝ²:</div>
+                <div class="result-title">RESULTADOS FINALES ℝ²</div>
                 <div class="calculation">
-                    <p><strong>De dónde sacamos el ángulo de 6.8°:</strong></p>
+                    <p style="font-size: 1.3rem;"><strong>De dónde sacamos el ángulo de 6.8°:</strong></p>
                     <div class="math">
                         \[\theta = \cos^{-1}\left(\frac{28}{\sqrt{793}}\right)\]
                         \[\theta = \cos^{-1}\left(\frac{28}{28.178}\right)\]
                         \[\theta = \cos^{-1}(0.993)\]
                         \[\theta = 6.8^\circ\]
                     </div>
-                    <p class="explanation">Usamos calculadora científica para calcular: √793 ≈ 28.178, luego 28 ÷ 28.178 ≈ 0.993, y finalmente cos⁻¹(0.993) ≈ 6.8°</p>
+                    <p class="large-text">Usamos calculadora científica para calcular: √793 ≈ 28.178, luego 28 ÷ 28.178 ≈ 0.993, y finalmente cos⁻¹(0.993) ≈ 6.8°</p>
                 </div>
                 <div class="math">
-                    <p><strong>Producto escalar:</strong> 28</p>
-                    <p><strong>Ángulo:</strong> 6.8°</p>
+                    <p style="font-size: 1.3rem;"><strong>Producto escalar:</strong> 28</p>
+                    <p style="font-size: 1.3rem;"><strong>Ángulo:</strong> 6.8°</p>
                 </div>
             </div>
         </section>
@@ -267,11 +283,11 @@
         <!-- Parte B: Vectores en R³ -->
         <section class="card">
             <h2 class="card-title">PARTE B: VECTORES EN ℝ³</h2>
-            <p class="explanation">Puntos: A(5,4,7) y B(3,6,8)</p>
+            <p class="explanation" style="font-size: 1.3rem;">Puntos: A(5,4,7) y B(3,6,8)</p>
             
             <div class="step">
                 <div class="step-number">1</div>
-                <strong>Vectores:</strong>
+                <strong style="font-size: 1.4rem;">Vectores:</strong>
                 <div class="math">
                     \[\vec{A} = (5, 4, 7)\]
                     \[\vec{B} = (3, 6, 8)\]
@@ -280,45 +296,45 @@
 
             <div class="step">
                 <div class="step-number">2</div>
-                <strong>Producto escalar:</strong>
+                <strong style="font-size: 1.4rem;">Producto escalar:</strong>
                 <div class="calculation">
-                    <p><strong>De dónde sale el producto escalar 95:</strong></p>
+                    <p style="font-size: 1.3rem;"><strong>De dónde sale el producto escalar 95:</strong></p>
                     <div class="math">
                         \[\vec{A} \cdot \vec{B} = (5)(3) + (4)(6) + (7)(8)\]
                         \[= 15 + 24 + 56\]
                         \[= 95\]
                     </div>
-                    <p class="explanation">El producto escalar en 3D se calcula multiplicando las tres componentes correspondientes:<br>
-                    Componente x: 5 × 3 = 15<br>
-                    Componente y: 4 × 6 = 24<br>
-                    Componente z: 7 × 8 = 56<br>
-                    Suma total: 15 + 24 + 56 = 95</p>
+                    <p class="large-text">El producto escalar en 3D se calcula multiplicando las tres componentes correspondientes:<br>
+                    <strong>Componente x:</strong> 5 × 3 = 15<br>
+                    <strong>Componente y:</strong> 4 × 6 = 24<br>
+                    <strong>Componente z:</strong> 7 × 8 = 56<br>
+                    <strong>Suma total:</strong> 15 + 24 + 56 = 95</p>
                 </div>
             </div>
 
             <div class="step">
                 <div class="step-number">3</div>
-                <strong>Normas:</strong>
+                <strong style="font-size: 1.4rem;">Normas:</strong>
                 <div class="math">
                     \[\|\vec{A}\| = \sqrt{5^2 + 4^2 + 7^2} = \sqrt{25 + 16 + 49} = \sqrt{90} = 3\sqrt{10}\]
                     \[\|\vec{B}\| = \sqrt{3^2 + 6^2 + 8^2} = \sqrt{9 + 36 + 64} = \sqrt{109}\]
                 </div>
-                <p class="explanation">Pitágoras extendido a 3 dimensiones.</p>
+                <p class="large-text">Pitágoras extendido a 3 dimensiones.</p>
             </div>
 
             <div class="step">
                 <div class="step-number">4</div>
-                <strong>Ángulo entre vectores:</strong>
+                <strong style="font-size: 1.4rem;">Ángulo entre vectores:</strong>
                 <div class="math">
                     \[\cos\theta = \frac{\vec{A} \cdot \vec{B}}{\|\vec{A}\| \|\vec{B}\|} = \frac{95}{3\sqrt{10} \cdot \sqrt{109}} = \frac{95}{3\sqrt{1090}}\]
                 </div>
-                <p class="explanation">Aplicamos la misma fórmula que en 2D.</p>
+                <p class="large-text">Aplicamos la misma fórmula que en 2D.</p>
             </div>
 
             <div class="result">
-                <div class="result-title">RESULTADOS FINALES ℝ³:</div>
+                <div class="result-title">RESULTADOS FINALES ℝ³</div>
                 <div class="calculation">
-                    <p><strong>De dónde sacamos el ángulo de 16.3°:</strong></p>
+                    <p style="font-size: 1.3rem;"><strong>De dónde sacamos el ángulo de 16.3°:</strong></p>
                     <div class="math">
                         \[\theta = \cos^{-1}\left(\frac{95}{3\sqrt{1090}}\right)\]
                         \[\theta = \cos^{-1}\left(\frac{95}{3 \times 33.015}\right)\]
@@ -326,11 +342,11 @@
                         \[\theta = \cos^{-1}(0.959)\]
                         \[\theta = 16.3^\circ\]
                     </div>
-                    <p class="explanation">Usamos calculadora científica para calcular: √1090 ≈ 33.015, luego 3 × 33.015 = 99.045, después 95 ÷ 99.045 ≈ 0.959, y finalmente cos⁻¹(0.959) ≈ 16.3°</p>
+                    <p class="large-text">Usamos calculadora científica para calcular: √1090 ≈ 33.015, luego 3 × 33.015 = 99.045, después 95 ÷ 99.045 ≈ 0.959, y finalmente cos⁻¹(0.959) ≈ 16.3°</p>
                 </div>
                 <div class="math">
-                    <p><strong>Producto escalar:</strong> 95</p>
-                    <p><strong>Ángulo:</strong> 16.3°</p>
+                    <p style="font-size: 1.3rem;"><strong>Producto escalar:</strong> 95</p>
+                    <p style="font-size: 1.3rem;"><strong>Ángulo:</strong> 16.3°</p>
                 </div>
             </div>
         </section>
